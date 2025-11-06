@@ -1,0 +1,146 @@
+html, body {
+  margin: 0;
+  font-family: "Noto Sans JP", "Meiryo", sans-serif;
+  background-color: #fff;
+  text-align: center;
+  color: #333;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ヘッダー */
+header {
+  background-color: #2f7f36;
+  color: white;
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* タイトル */
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: blink 1.2s infinite;
+  margin: 0;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.0; }
+}
+
+/* 主体部分 */
+main {
+  position: relative;
+  flex: 1;
+}
+
+.dish-display {
+  background: #d6f8d6;
+  color: #2f7f36;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 10px;
+  margin: 20px auto;
+  width: 40%;
+  border-radius: 5px;
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.input-box {
+  border: 4px solid #2f7f36;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 200px;
+  margin: 20px auto;
+  padding: 5px;
+  text-align: center;
+  min-height: 1.6em;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.num {
+  height: 60px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color : #2f7f36;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s, box-shadow 0.1s;
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255,255,255,0) 80%), #e0e0e0;
+}
+.num:hover {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.459), rgba(255,255,255,0) 80%), #d5d5d5;
+}
+.num:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.3); 
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;
+  margin: auto;
+}
+.btn {
+  height: 60px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s, box-shadow 0.1s;
+  text-decoration: none;
+}
+#nextBtn {
+    color: white;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.459), rgba(255,255,255,0) 50%), #c4291f;
+    border: 4px solid #9f1a17;
+}
+#nextBtn:hover {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.459), rgba(255,255,255,0) 50%), #b5221a;
+}
+#nextBtn:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+}
+#delBtn {
+    color: white;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.459), rgba(255,255,255,0) 50%), #24ac2f;
+    border: 4px solid #178140;
+}
+#delBtn:hover {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.459), rgba(255,255,255,0) 50%), #1f9e27;
+}
+#delBtn:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* フッター */
+footer {
+  background-color: #2f7f36;
+  color: white;
+  padding: 10px 0;
+  font-size: 0.8rem;
+  margin-top: 60px;
+}
